@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-areas:
+      "header header"
+     "order menu-area";
+  grid-template-columns: 1fr 1fr;
 }
 
 .App-logo {
@@ -35,4 +40,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+.header {
+  grid-area: header;
+}
+.order-page {
+  grid-area: order;
+}
+.menu-page {
+  grid-area: menu-area;
 }
