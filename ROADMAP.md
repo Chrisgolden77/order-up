@@ -6,10 +6,10 @@ I decided to focus my time on:
   - and functionality/ quality of code for anyone who may go in and work on it. 
 
 
-  If I had more time, I would have loved to finish:
-    - setting up the order component with the remove from order option
-    - adding tests to make sure adding and removing items works as expected
-    - polish the app up do not have scrolling of the order page if menu has to scroll. 
-    - adding the structure for submitting an order
+If I had more time, I would have loved to finish:
+  - setting up the order component with the remove from order option
+  - adding tests to make sure adding and removing items works as expected
+  - polish the app up do not have scrolling of the order page if menu has to scroll. 
+  - adding the structure for submitting an order
 
 
