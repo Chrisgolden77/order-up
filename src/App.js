@@ -5,7 +5,7 @@ import Order from "./modules/Order";
 import Menu from "./modules/Menu";
 
 function App() {
-  const [currentOrder, setCurrentOrder] = useState({ items: [], total: 0.0 });
+  const [currentOrder, setCurrentOrder] = useState({ orderId: Date.now(), items: [], total: 0.0 });
 
   const updateCurrentOrder = ({ orderItem, updateMethod }) => {
     let currentItems;
@@ -27,7 +27,7 @@ function App() {
       default:
         break;
     }
-    setCurrentOrder({ items: currentItems, total: currentTotal });
+    setCurrentOrder({ orderId: currentOrder.orderId, items: currentItems, total: currentTotal });
     return;
   };
   return (

@@ -26,6 +26,7 @@ export default function Menu({ updateCurrentOrder }) {
   return (
     <div className="menu-page page-section">
       <h1>Menu</h1>
+      <hr/> 
       <div className="page-item-area">{menu && renderMenuItems()}</div>
     </div>
   );

@@ -21,9 +21,9 @@ export default function Order({ currentOrder, updateCurrentOrder }) {
   };
   return (
     <div className="order-page page-section">
-      <h1>Total: {(currentOrder.total * 1.0).toFixed(2)}</h1>
+      <h1>Order Total: ${(currentOrder.total * 1.0).toFixed(2)}</h1>
+      <hr />
       <h4 className="page-item-area">{renderCurrentOrder()}</h4>
-      <footer className="order-total"></footer>
     </div>
   );
 }
