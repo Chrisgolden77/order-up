@@ -1,18 +1,22 @@
 import React from "react";
 
+import ItemDetail from "../molecules/ItemDetail";
 export default function MenuItem({ menuItem, updateCurrentOrder }) {
   const renderOptions = () => {
-    return menuItem.options.map((option, i) => <div key={`option.size${i}`}>
-      Size: {option.size}
-      Price: {option.price}
-      <button onClick={() => updateCurrentOrder({"item": menuItem.item, ...{option}})}>Add To Order</button>
-    </div>);
+    return menuItem.options.map((option, i) => (
+      <ItemDetail
+        buttonAction={(foodItemDetail) =>
+          updateCurrentOrder({ item: menuItem.item, ...foodItemDetail })
+        }
+        buttonText="Add To Order"
+        foodItem={option}
+        key={`option${i}`}
+      />
+    ));
   };
   return (
-    <div className="option">
+    <div className="menu-item">
       <h2>{menuItem.item}</h2>
-      <h3>Options: </h3>
-      <br />
       <h4>{menuItem.options.length && renderOptions()}</h4>
     </div>
   );
